@@ -1,6 +1,6 @@
 import pytest
 
-from calculatrice import addition, division
+from calculatrice import addition, division, multiplication
 
 
 def test_addition():
@@ -14,3 +14,7 @@ def test_division():
 def test_division_par_zero():
     with pytest.raises(ValueError):
         division(1, 0)
+
+
+def test_multiplication():
+    assert multiplication(3, 4) == 12
